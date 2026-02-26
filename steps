@@ -1,0 +1,26 @@
+1. Tenant Grafana
+2. Configurar Collector OTel (Instancia + Token)
+- Instancia: 1499372
+- Token Collector OTel: glc_eyJvIjoiMTY0NDkwMSIsIm4iOiJzdGFjay0xNDk5MzcyLW90bHAtd3JpdGUtZ3JhZmFuYV9ub2RlanMiLCJrIjoiMzM3NmdnNDAzM0tqbjhIcHo4ZElIR0tnIiwibSI6eyJyIjoicHJvZC11cy1lYXN0LTAifX0=
+
+- Crear Base64 en linux : texto='1499372:glc_eyJvIjoiMTY0NDkwMSIsIm4iOiJzdGFjay0xNDk5MzcyLW90bHAtd3JpdGUtZ3JhZmFuYV9ub2RlanMiLCJrIjoiMzM3NmdnNDAzM0tqbjhIcHo4ZElIR0tnIiwibSI6eyJyIjoicHJvZC11cy1lYXN0LTAifX0='
+echo -n "$texto" | base64
+
+- Obtener el Base64: MTQ5OTM3MjpnbGNfZXlKdklqb2lNVFkwTkRrd01TSXNJbTRpT2lKemRHRmpheTB4TkRrNU16Y3lMVzkwYkhBdGQzSnBkR1V0WjNKaFptRnVZVjl1YjJSbGFuTWlMQ0pySWpvaU16TTNObWRuTkRBek0wdHFiamhJY0hvNFpFbElSMHRuSWl3aWJTSTZleUp5SWpvaWNISnZaQzExY3kxbFlYTjBMVEFpZlgwPQ==
+
+- Crear variables de entorno (CAMBIAR EL SERVICE NAME, EL HEADERS):
+export OTEL_EXPORTER_OTLP_PROTOCOL="http/protobuf" 
+export OTEL_EXPORTER_OTLP_ENDPOINT="https://otlp-gateway-prod-us-east-2.grafana.net/otlp" 
+export OTEL_EXPORTER_OTLP_HEADERS="Authorization=Basic%20MTQ5OTM3MjpnbGNfZXlKdklqb2lNVFkwTkRrd01TSXNJbTRpT2lKemRHRmpheTB4TkRrNU16Y3lMVzkwYkhBdGQzSnBkR1V0WjNKaFptRnVZVjl1YjJSbGFuTWlMQ0pySWpvaU16TTNObWRuTkRBek0wdHFiamhJY0hvNFpFbElSMHRuSWl3aWJTSTZleUp5SWpvaWNISnZaQzExY3kxbFlYTjBMVEFpZlgwPQ==" 
+export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT="https://otlp-gateway-prod-us-east-2.grafana.net/otlp/v1/traces" 
+export OTEL_EXPORTER_OTLP_METRICS_ENDPOINT=https://otlp-gateway-prod-us-east-2.grafana.net/otlp/v1/metrics
+export OTEL_EXPORTER_OTLP_LOGS_ENDPOINT=https://otlp-gateway-prod-us-east-2.grafana.net/otlp/v1/logs
+export OTEL_SERVICE_NAME="banco_digital_observability" 
+export OTEL_RESOURCE_ATTRIBUTES="deployment.environment=production,service.version=1.0.0"
+
+- Crear Token Clasic GitHub
+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
+
+- Crear MCPs de GitHub en el Tenant de Grafana adicionando el Token GitHub como Header.
+
+- modificar Prompt de instrumentacion.
