@@ -1,0 +1,33 @@
+1539575
+glc_eyJvIjoiMTY4MTQ3OCIsIm4iOiJzdGFjay0xNTM5NTc1LW90bHAtd3JpdGUtZ3JhZmFuYTEiLCJrIjoiMTd2NXhmZXgzeUNUMTNhejY1cGlQODl3IiwibSI6eyJyIjoicHJvZC11cy1lYXN0LTAifX0=
+
+
+texto='1539575:glc_eyJvIjoiMTY4MTQ3OCIsIm4iOiJzdGFjay0xNTM5NTc1LW90bHAtd3JpdGUtZ3JhZmFuYTEiLCJrIjoiMTd2NXhmZXgzeUNUMTNhejY1cGlQODl3IiwibSI6eyJyIjoicHJvZC11cy1lYXN0LTAifX0=' 
+echo -n "$texto" | base64
+
+
+MTUzOTU3NTpnbGNfZXlKdklqb2lNVFk0TVRRM09DSXNJbTRpT2lKemRHRmpheTB4TlRNNU5UYzFMVzkwYkhBdGQzSnBkR1V0WjNKaFptRnVZVEVpTENKcklqb2lNVGQyTlhobVpYZ3plVU5VTVROaGVqWTFjR2xRT0RsM0lpd2liU0k2ZXlKeUlqb2ljSEp2WkMxMWN5MWxZWE4wTFRBaWZYMD0=
+
+
+export OTEL_EXPORTER_OTLP_PROTOCOL="http/protobuf" 
+export OTEL_EXPORTER_OTLP_ENDPOINT="https://otlp-gateway-prod-us-east-2.grafana.net/otlp" 
+export OTEL_EXPORTER_OTLP_HEADERS="Authorization=Basic%20MTUzOTU3NTpnbGNfZXlKdklqb2lNVFk0TVRRM09DSXNJbTRpT2lKemRHRmpheTB4TlRNNU5UYzFMVzkwYkhBdGQzSnBkR1V0WjNKaFptRnVZVEVpTENKcklqb2lNVGQyTlhobVpYZ3plVU5VTVROaGVqWTFjR2xRT0RsM0lpd2liU0k2ZXlKeUlqb2ljSEp2WkMxMWN5MWxZWE4wTFRBaWZYMD0=" 
+export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT="https://otlp-gateway-prod-us-east-2.grafana.net/otlp/v1/traces" 
+export OTEL_EXPORTER_OTLP_METRICS_ENDPOINT=https://otlp-gateway-prod-us-east-2.grafana.net/otlp/v1/metrics 
+export OTEL_EXPORTER_OTLP_LOGS_ENDPOINT=https://otlp-gateway-prod-us-east-2.grafana.net/otlp/v1/logs 
+export OTEL_SERVICE_NAME="prueba_observability" 
+export OTEL_RESOURCE_ATTRIBUTES="deployment.environment=production,service.version=1.0.0"
+
+
+export OTEL_EXPORTER_OTLP_PROTOCOL="http/protobuf" 
+export OTEL_EXPORTER_OTLP_ENDPOINT="https://otlp-gateway-prod-us-east-2.grafana.net/otlp" 
+export OTEL_EXPORTER_OTLP_HEADERS="Authorization=Basic MTUzOTU3NTpnbGNfZXlKdklqb2lNVFk0TVRRM09DSXNJbTRpT2lKemRHRmpheTB4TlRNNU5UYzFMVzkwYkhBdGQzSnBkR1V0WjNKaFptRnVZVEVpTENKcklqb2lNVGQyTlhobVpYZ3plVU5VTVROaGVqWTFjR2xRT0RsM0lpd2liU0k2ZXlKeUlqb2ljSEp2WkMxMWN5MWxZWE4wTFRBaWZYMD0=" 
+export OTEL_EXPORTER_OTLP_TRACES_ENDPOINT="https://otlp-gateway-prod-us-east-2.grafana.net/otlp/v1/traces" 
+export OTEL_EXPORTER_OTLP_METRICS_ENDPOINT=https://otlp-gateway-prod-us-east-2.grafana.net/otlp/v1/metrics 
+export OTEL_EXPORTER_OTLP_LOGS_ENDPOINT=https://otlp-gateway-prod-us-east-2.grafana.net/otlp/v1/logs 
+export OTEL_SERVICE_NAME="prueba_observability" 
+export OTEL_RESOURCE_ATTRIBUTES="deployment.environment=production,service.version=1.0.0"
+
+
+
+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
