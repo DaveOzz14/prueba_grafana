@@ -28,6 +28,13 @@ export OTEL_EXPORTER_OTLP_LOGS_ENDPOINT=https://otlp-gateway-prod-us-east-2.graf
 export OTEL_SERVICE_NAME="prueba_observability" 
 export OTEL_RESOURCE_ATTRIBUTES="deployment.environment=production,service.version=1.0.0"
 
-
+$env:OTEL_EXPORTER_OTLP_PROTOCOL="http/protobuf" 
+$env:OTEL_SERVICE_NAME="prueba_observability"
+$env:OTEL_EXPORTER_OTLP_ENDPOINT="https://otlp-gateway-prod-us-east-2.grafana.net/otlp" 
+$env:OTEL_EXPORTER_OTLP_TRACES_ENDPOINT="https://otlp-gateway-prod-us-east-2.grafana.net/otlp/v1/traces"
+$env:OTEL_EXPORTER_OTLP_METRICS_ENDPOINT="https://otlp-gateway-prod-us-east-2.grafana.net/otlp/v1/metrics"
+$env:OTEL_EXPORTER_OTLP_LOGS_ENDPOINT="https://otlp-gateway-prod-us-east-2.grafana.net/otlp/v1/logs"
+$env:OTEL_EXPORTER_OTLP_HEADERS="Authorization=Basic MTUzOTU3NTpnbGNfZXlKdklqb2lNVFk0TVRRM09DSXNJbTRpT2lKemRHRmpheTB4TlRNNU5UYzFMVzkwYkhBdGQzSnBkR1V0WjNKaFptRnVZVEVpTENKcklqb2lNVGQyTlhobVpYZ3plVU5VTVROaGVqWTFjR2xRT0RsM0lpd2liU0k2ZXlKeUlqb2ljSEp2WkMxMWN5MWxZWE4wTFRBaWZYMD0="
+$env:OTEL_RESOURCE_ATTRIBUTES="deployment.environment=production,service.version=1.0.0"
 
 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
