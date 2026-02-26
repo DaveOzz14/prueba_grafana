@@ -27,14 +27,15 @@ OTEL_RESOURCE_ATTRIBUTES            e.g. deployment.environment=dev
 import logging
 import os
 
+
 from opentelemetry import metrics, trace
+from opentelemetry._logs import set_logger_provider
 from opentelemetry.exporter.otlp.proto.http._log_exporter import OTLPLogExporter
 from opentelemetry.exporter.otlp.proto.http.metric_exporter import OTLPMetricExporter
 from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
 from opentelemetry.instrumentation.logging import LoggingInstrumentor
-from opentelemetry.logs import set_logger_provider
-from opentelemetry.sdk.logs import LoggerProvider, LoggingHandler
-from opentelemetry.sdk.logs.export import BatchLogRecordProcessor
+from opentelemetry.sdk._logs import LoggerProvider, LoggingHandler
+from opentelemetry.sdk._logs.export import BatchLogRecordProcessor
 from opentelemetry.sdk.metrics import MeterProvider
 from opentelemetry.sdk.metrics.export import PeriodicExportingMetricReader
 from opentelemetry.sdk.resources import Resource
